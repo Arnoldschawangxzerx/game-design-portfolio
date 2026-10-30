@@ -1,0 +1,3 @@
+# Static site, no build step. (GitHub Pages ignores this file.)
+[build]
+  publish = "."

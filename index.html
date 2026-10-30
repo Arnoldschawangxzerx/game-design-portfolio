@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- =========================================================
+       SEO + LINK PREVIEWS
+       Search engines and social sites read these tags WITHOUT running
+       JavaScript, so they live here (not in script.js).
+       ✏️ CHANGE: after publishing, replace SITE_URL below with your real
+       address, e.g. https://arnoldschawangxzerx.github.io/
+       ========================================================= -->
+  <title>Aaryan | Gameplay Programmer &amp; Pixel Artist</title>
+  <meta name="description" content="Portfolio of Aaryan, a game design student at Istanbul Kent University building games from code to pixels: Unity gameplay programming, pixel art, and level design. Open to internships and junior roles." />
+  <meta name="author" content="Aaryan" />
+  <!-- ✏️ keep this in sync with --bg in style.css -->
+  <meta name="theme-color" content="#0f1b2d" />
+  <link rel="canonical" href="https://arnoldschawangxzerx.github.io/" />
+
+  <!-- Open Graph (Discord, LinkedIn, WhatsApp, Facebook…) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aaryan · Game Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Aaryan | Gameplay Programmer &amp; Pixel Artist" />
+  <meta property="og:description" content="I build games from code to pixels: mechanics, levels, and art, all made by me." />
+  <meta property="og:url" content="https://arnoldschawangxzerx.github.io/" />
+  <!-- og:image must be a FULL URL (https://…) to work everywhere. 1200×630 PNG. -->
+  <meta property="og:image" content="https://arnoldschawangxzerx.github.io/assets/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Pixel-art card with a teal-hooded character, reading: Aaryan, Gameplay Programmer and Pixel Artist, Istanbul" />
+  <!-- X / Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aaryan | Gameplay Programmer &amp; Pixel Artist" />
+  <meta name="twitter:description" content="I build games from code to pixels: mechanics, levels, and art, all made by me." />
+  <meta name="twitter:image" content="https://arnoldschawangxzerx.github.io/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="Pixel-art card with a teal-hooded character, reading: Aaryan, Gameplay Programmer and Pixel Artist, Istanbul" />
+
+  <!-- Favicons: frame 1 of the hero sprite (32×32 tab icon, 180×180 home-screen icon) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Fonts (free, Google Fonts). Pixel font = headings only; Inter = body text. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav__logo" href="#top" aria-label="Aaryan, back to top">
+        <img src="assets/images/favicon.png" alt="" width="32" height="32" class="pixel" />
+        <span data-bind="name">Aaryan</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Art</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#archive">Archive</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= 1. HERO =================
+         Text here is a fallback for search engines / no-JS.
+         The live text comes from SITE in script.js. -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__status"><span class="dot" aria-hidden="true"></span> <span data-bind="availability">Open to internships &amp; junior roles</span></p>
+          <h1 class="hero__name" id="hero-name" data-bind="name">Aaryan</h1>
+          <p class="hero__headline" data-bind="headline">Gameplay Programmer &amp; Pixel Artist</p>
+          <p class="hero__pitch" data-bind="pitch">I build games from code to pixels: mechanics, levels, and art, all made by me.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://fenzo-arazi.itch.io/" data-bind-href="playLink" target="_blank" rel="noopener">▶ Play my games</a>
+            <a class="btn btn--ghost" href="#contact">Contact me</a>
+          </div>
+          <ul class="hero__facts" aria-label="Quick facts">
+            <li><span class="label">Based in</span> <span data-bind="location">Istanbul, Türkiye</span></li>
+            <li><span class="label">Tools</span> <span data-bind="tools">Unity / Aseprite / Blender / Git</span></li>
+          </ul>
+        </div>
+
+        <!-- Hero "game screen" with a looping sprite.
+             ✏️ CHANGE: swap assets/images/hero-sprite.png for your own sprite sheet
+             (4 frames side by side, 16×16 each). See .sprite in style.css. -->
+        <div class="hero__stage" aria-hidden="true">
+          <div class="stage">
+            <span class="stage__hud">LV 1 · ISTANBUL</span>
+            <span class="stage__hud stage__hud--right">★ × 03</span>
+            <div class="sprite"></div>
+            <div class="stage__ground"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. FEATURED PROJECTS ================= -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">01</p>
+          <h2 id="projects-title">Featured Projects</h2>
+          <p class="section__intro">Three games I'm proud of. Open any card for the full breakdown.</p>
+        </header>
+        <!-- Cards are generated from SITE.projects in script.js -->
+        <div class="project-grid" id="project-list"></div>
+      </div>
+    </section>
+
+    <!-- ================= 3. PIXEL ART GALLERY ================= -->
+    <section class="section section--alt" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">02</p>
+          <h2 id="gallery-title">Pixel Art</h2>
+          <p class="section__intro">Sprites, props and studies made in Aseprite. Click any piece to enlarge.</p>
+        </header>
+        <!-- Generated from SITE.gallery in script.js -->
+        <ul class="gallery-grid" id="gallery-list"></ul>
+      </div>
+    </section>
+
+    <!-- ================= 4. SKILLS ================= -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">03</p>
+          <h2 id="skills-title">Skills</h2>
+        </header>
+        <!-- Generated from SITE.skills in script.js -->
+        <div class="skills-grid" id="skills-list"></div>
+      </div>
+    </section>
+
+    <!-- ================= 5. ABOUT ================= -->
+    <section class="section section--alt" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__portrait">
+          <!-- ✏️ CHANGE: drop your photo or pixel self-portrait at
+               assets/images/avatar.png and update SITE.avatar in script.js -->
+          <img id="about-avatar" class="pixel" src="assets/images/avatar-placeholder.png" alt="Pixel-art avatar of Aaryan" width="240" height="240" loading="lazy" decoding="async" />
+        </div>
+        <div class="about__text">
+          <header class="section__head">
+            <p class="section__kicker">04</p>
+            <h2 id="about-title">About Me</h2>
+          </header>
+          <div id="about-bio"></div>
+          <div class="looking-for">
+            <h3>What I'm looking for</h3>
+            <p id="about-looking"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. EARLY WORK ARCHIVE ================= -->
+    <section class="section" id="archive" aria-labelledby="archive-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">05</p>
+          <h2 id="archive-title">Early Work Archive</h2>
+          <p class="section__intro">Smaller games, jams and experiments, where I learned the basics.</p>
+        </header>
+        <!-- Generated from SITE.earlyWork in script.js -->
+        <ol class="archive" id="archive-list"></ol>
+      </div>
+    </section>
+
+    <!-- ================= 7. CONTACT ================= -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <header class="section__head">
+          <p class="section__kicker">06</p>
+          <h2 id="contact-title">Let's make something</h2>
+          <p class="section__intro">Hiring for an internship or junior role? I usually reply within a day.</p>
+        </header>
+        <div class="contact__email">
+          <a class="contact__mail" id="contact-mail" href="mailto:aaryanhussain029@gmail.com">aaryanhussain029@gmail.com</a>
+          <button class="btn btn--small btn--ghost" type="button" id="copy-email">Copy email</button>
+        </div>
+        <div class="contact__actions">
+          <a class="btn btn--primary" id="cv-link" href="assets/cv/Aaryan-CV.pdf" download>⬇ Download CV (PDF)</a>
+        </div>
+        <!-- Generated from SITE.links in script.js -->
+        <ul class="socials" id="social-list" aria-label="Social links"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> <span data-bind="name">Aaryan</span>. Hand-built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT DETAIL MODAL ================= -->
+  <dialog class="modal" id="project-dialog" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <button class="modal__close" type="button" data-close aria-label="Close project details">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </dialog>
+
+  <!-- ================= GALLERY LIGHTBOX ================= -->
+  <dialog class="lightbox" id="lightbox" aria-label="Artwork viewer">
+    <button class="modal__close" type="button" data-close aria-label="Close artwork viewer">✕</button>
+    <figure class="lightbox__figure">
+      <img id="lightbox-img" class="pixel" src="" alt="" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <div class="lightbox__nav">
+      <button class="btn btn--small btn--ghost" type="button" id="lightbox-prev" aria-label="Previous artwork">◀ Prev</button>
+      <span id="lightbox-count" aria-live="polite"></span>
+      <button class="btn btn--small btn--ghost" type="button" id="lightbox-next" aria-label="Next artwork">Next ▶</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="noscript">This portfolio needs JavaScript to show projects and art. You can also find me at
+      <a href="https://fenzo-arazi.itch.io/">itch.io</a> or email <a href="mailto:aaryanhussain029@gmail.com">aaryanhussain029@gmail.com</a>.</p>
+  </noscript>
+</body>
+</html>
